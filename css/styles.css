@@ -7,6 +7,7 @@
     --titles-font-weight:700;
     --general-font-size:14px;
     --general-font-weight:400;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -83,6 +84,10 @@ img {
     color: var(--highlighting-color);
 }
 
+.global-header .logo {
+    transition: color var(--transition);
+}
+
 .global-header .logo:hover,
 .global-header .logo:focus {
     color: var(--highlighting-color);
@@ -111,6 +116,10 @@ img {
     font-weight: 500;
     line-height: 1.17214;
     width: 75%;
+}
+
+.main-navigation a {
+    transition: color var(--transition);
 }
 
 .global-header .main-navigation a:link,
@@ -144,6 +153,7 @@ img {
     justify-content: space-between;
     align-items: center;
     fill: var(--backup-text-color);
+    transition: color var(--transition), fill var(--transition);
 }
 .container-contact .e-mail .icon {
     width: 16px;
@@ -205,6 +215,7 @@ img {
     padding: 10px 20px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: color var(--transition), background-color var(--transition);
 ;
 }
 
@@ -359,6 +370,10 @@ img {
     margin: 12px;
 }
 
+.team-members .section .social-media a {
+    transition: background-color var(--transition), fill var(--transition), border-radius var(--transition);
+}
+
 .team-members .section .social-media a:hover,
 .team-members .section .social-media a:focus {
     background-color: var(--highlighting-color);
@@ -415,6 +430,7 @@ img {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     fill: #AFB1B8;
+    transition: border var(--transition), fill var(--transition);
 }
 
 .customers .icon {
@@ -488,6 +504,7 @@ img {
     background-color:rgba(255, 255, 255, 0.1);;
     fill: #ffffff;
     border-radius: 50%;
+    transition: background-color var(--transition), fill var(--transition), border-radius var(--transition);
 }
 
 
@@ -515,6 +532,7 @@ img {
     color: #ffffff;
     width: 145px;
     padding: 0;
+    transition: color var(--transition);
 }
 
 .global-footer .logo span {
@@ -536,6 +554,7 @@ img {
 .global-footer .full-adress a {
     line-height: 1.14286;
     color: rgba(100%,100%,100%, 60%);
+    transition: color var(--transition);
 }
 
 .global-footer .full-adress a:hover,
@@ -557,6 +576,7 @@ img {
     font-family: inherit;
     border-radius: 4px;
     padding: 6px 22px;
+    transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
 }
 
 .portfolio-page .closed-buttons button:hover,
@@ -610,6 +630,7 @@ img {
 .section .opened-buttons .item {
     flex: 0 1 31%;
     border: 1px solid #EEEEEE;
+    transition: box-shadow var(--transition);
 }
 
 .section .opened-buttons .item img {
