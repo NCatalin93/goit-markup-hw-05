@@ -706,3 +706,45 @@ img {
     line-height: 1.55;
     color: var(--white-color);
 }
+
+/* Modal section */
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);;
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.close-btn {
+    position: absolute;
+    background-color: var(--white-color);
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    fill: #000000;
+    top: 0;
+    right: 0;
+    margin: 8px;
+}
