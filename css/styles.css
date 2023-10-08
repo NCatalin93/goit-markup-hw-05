@@ -710,40 +710,55 @@ img {
 /* Modal section */
 
 .modal {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
+    position: fixed; 
+    z-index: 1; 
     left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);;
+    top: -100%;
+    opacity: 0;
+    transition: top var(--transition), opacity var(--transition);
+    }
+
+.modal.is-hidden {
+    top: 0;
+    opacity: 1;
 }
+
 .modal-content {
     position: relative;
-    background-color: #fff;
-    width: 528px;
-    height: 581px;
+    background-color: var(--white-color);
+    padding: 8px;
+    width: 33%;
+    height: 55%;
     border-radius: 4px;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14); 
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.is-hidden {
-    visibility: hidden;
-}
-
-.close-btn {
+.close-modal-background {
     position: absolute;
-    background-color: var(--white-color);
-    width: 30px;
-    height: 30px;
+    padding: 6px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    margin: 8px;
     cursor: pointer;
-    fill: #000000;
+}
+
+.close-modal-icon {
+    width: 11px;
+    height: 11px;
+    position: absolute;
     top: 0;
     right: 0;
     margin: 8px;
